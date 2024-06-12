@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* CSS Link */
+    .subnav-link {
+        @apply hover:text-violet-600 hover:border-b-violet-600 transition-all duration-300 py-5 px-2 border-y border-white font-medium flex items-center gap-3;
+    }
+    .subnav-link-active {
+        @apply text-violet-600 border-b-violet-600;
+    }
+    .nav-link {
+        @apply hover:text-violet-600 hover:border-t-violet-600 transition-all duration-300 py-4 px-4 border-y border-white font-medium flex items-center gap-1;
+    }
+    .nav-link-active {
+        @apply text-violet-600 border-t-violet-600;
+    }
+    .nav-admin {
+        @apply flex gap-3 items-center font-medium px-7 py-3 text-gray-500 link-hover hover:text-black;
+    }
+    .nav-admin-active {
+        @apply text-black;
+    }
+    .link-hover {
+        @apply transition-all duration-300 hover:text-violet-600;
+    }
+
+    /* CSS Dropdown */
+    .list-dropdown {
+        @apply w-48 bg-white rounded shadow overflow-hidden border p-1 z-10;
+    }
+    .link-dropdown {
+        @apply hover:text-white hover:bg-violet-600 transition-all duration-300 flex gap-2 items-center px-4 py-2 rounded;
+    }
+
+    /* CSS btn */
+    .btn {
+        @apply hover:bg-violet-600 transition-all duration-300 inline-flex w-fit gap-2 items-center rounded-md px-4 py-2 bg-gray-600 text-white focus-visible:outline-violet-700;
+    }
+    .btn-primary {
+        @apply bg-violet-600 hover:bg-gray-600;
+    }
+
+    /* CSS badge */
+    .badge {
+        @apply absolute top-0 right-0 px-2 py-0.5 rounded-tr rounded-bl bg-violet-700 text-white text-[12px];
+    }
+    /* group */
+    .form-group {
+        @apply flex border rounded-lg overflow-hidden;
+    }
+    .input-group {
+        @apply py-2 px-4 outline-none;
+    }
+    .btn-group {
+        @apply py-2 px-4 hover:bg-gray-700 bg-violet-700 text-white transition-all duration-300 ring-0;
+    }
+    .btn-danger {
+        @apply hover:bg-red-600;
+    }
+
+    /* CSS error */
+    .error-input {
+        @apply border-red-500;
+    }
+}
+
+/* CSS Slick slider */
+.slick-dots {
+    @apply flex justify-center items-center gap-2;
+}
+.slick-dots li button {
+    @apply w-3 h-3 bg-gray-300 rounded-full text-[0px] transition-all duration-300;
+}
+.slick-dots li.slick-active button {
+    @apply bg-violet-600;
+}
+
+/* CSS Swiper */
+.swiper-pagination-bullet {
+    @apply w-3 h-3 bg-white border border-violet-600 transition-all duration-300;
+}
+.swiper-pagination-bullet-active {
+    @apply w-6 rounded-full bg-violet-600;
+}
